@@ -1,0 +1,14 @@
+streamlit==1.31.0
+pandas==2.1.4
+numpy==1.26.4
+
+opencv-python==4.9.0.80
+mediapipe==0.10.9
+
+matplotlib==3.8.2
+scipy==1.11.4
+
+gradio_client==0.10.0
+
+python-dotenv==1.0.1
+google-generativeai==0.3.2
