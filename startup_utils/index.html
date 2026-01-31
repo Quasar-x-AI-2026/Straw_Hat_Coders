@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 400px; text-align: center; }
+        .terms { height: 150px; overflow-y: auto; border: 1px solid #eee; padding: 15px; font-size: 12px; text-align: left; background: #fafafa; margin: 15px 0; border-radius: 5px; color: #444; }
+        .options { text-align: left; font-size: 13px; margin-bottom: 20px; }
+        .btn-box { display: flex; gap: 10px; }
+        .btn { flex: 1; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        .btn-yes { background: #2ecc71; color: white; }
+        .btn-no { background: #95a5a6; color: white; }
+        .btn:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="margin-top:0">Data Consent</h2>
+        <div class="terms">
+            <strong>AI HEALTH INTELLIGENCE SYSTEM</strong><br><br>
+            By clicking 'Agree', you authorize the system to analyze data for health insights. 
+            All processing is done under security protocols.
+        </div>
+        <div class="options">
+            <input type="radio" id="forever" name="perm" value="forever">
+            <label for="forever">Grant permission for all time</label><br><br>
+            <input type="radio" id="ask" name="perm" value="ask" checked>
+            <label for="ask">Ask me every time</label>
+        </div>
+        <div class="btn-box">
+            <button class="btn btn-no" onclick="pywebview.api.decline()">Decline</button>
+            <button class="btn btn-yes" onclick="submit()">Agree & Launch</button>
+        </div>
+    </div>
+
+    <script>
+        function submit() {
+            const isForever = document.getElementById('forever').checked;
+            pywebview.api.grant(isForever);
+        }
+    </script>
+</body>
+</html>

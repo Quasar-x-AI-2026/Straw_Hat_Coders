@@ -1,0 +1,14 @@
+{
+  "test": "PHQ9",
+  "view": "weekly",
+  "recent_scores": [
+    6.5,
+    8.0,
+    5.666666666666667,
+    6.666666666666667
+  ],
+  "trend": "Stable",
+  "confidence": "high",
+  "baseline": "baseline not established",
+  "reflection_prompt": "Did workload or social interaction change?"
+}

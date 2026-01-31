@@ -1,0 +1,19 @@
+GAD7 = {
+    "tool": "GAD-7",
+    "questions": [
+        "Feeling nervous, anxious, or on edge",
+        "Not being able to stop or control worrying",
+        "Worrying too much about different things",
+        "Trouble relaxing",
+        "Being so restless that it is hard to sit still",
+        "Becoming easily annoyed or irritable",
+        "Feeling afraid as if something awful might happen"
+    ],
+    "scale": [0, 1, 2, 3],
+    "labels": [
+        "Not at all",
+        "Several days",
+        "More than half the days",
+        "Nearly every day"
+    ]
+}
